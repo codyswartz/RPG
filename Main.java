@@ -11,8 +11,8 @@ public class TextRPG {
         int playerAttack = 20;
         int playerGold = 0;
 
-        System.out.println("Welcome to the Text RPG!");
-        System.out.println("You are a brave adventurer.");
+        System.out.println("Welcome to my RPG!");
+        System.out.println("You are to venture forth on this short adventure!");
 
         while (playerHealth > 0) {
             System.out.println("\nOptions:");
@@ -27,7 +27,7 @@ public class TextRPG {
                     int monsterHealth = random.nextInt(50) + 50;
                     int monsterAttack = random.nextInt(10) + 10;
 
-                    System.out.println("You encountered a monster!");
+                    System.out.println("You encountered a boar!");
 
                     while (monsterHealth > 0 && playerHealth > 0) {
                         System.out.println("\n1. Attack");
@@ -42,21 +42,21 @@ public class TextRPG {
                             monsterHealth -= damageDealt;
                             playerHealth -= damageTaken;
 
-                            System.out.println("You dealt " + damageDealt + " damage to the monster.");
-                            System.out.println("The monster dealt " + damageTaken + " damage to you.");
+                            System.out.println("You dealt " + damageDealt + " damage to the boar.");
+                            System.out.println("The boar dealt " + damageTaken + " damage to you.");
                         } else if (action == 2) {
 
-                            System.out.println("You ran away from the monster.");
+                            System.out.println("You ran away from the boar.");
                             break;
                         }
                     }
 
                     if (playerHealth <= 0) {
-                        System.out.println("Game Over! You were defeated by the monster.");
+                        System.out.println("Game Over! You were slain by the boar.");
                     } else {
                         int goldFound = random.nextInt(20) + 10;
                         playerGold += goldFound;
-                        System.out.println("You defeated the monster and found " + goldFound + " gold.");
+                        System.out.println("You defeated the boar and found " + goldFound + " gold.");
                     }
                     break;
 
@@ -69,7 +69,7 @@ public class TextRPG {
 
                 case 3:
 
-                    System.out.println("Thanks for playing! You earned " + playerGold + " gold.");
+                    System.out.println("Thanks for playing! You earned " + playerGold + " gold over the course of your adventure.");
                     return;
 
                 default:
